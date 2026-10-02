@@ -1,5 +1,5 @@
 export const SITE = {
-  name: 'भूक संघटना',
+  name: 'मेजवानी',
   tagline: 'घरच्या जेवणाची गोष्ट',
   phone: '7972961693',
   phoneDisplay: '+91 79729 61693',

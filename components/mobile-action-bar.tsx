@@ -1,5 +1,5 @@
 import { MessageCircle, Phone } from 'lucide-react'
-import { telHref, whatsappHref } from '@/lib/site'
+import { SITE, telHref, whatsappHref } from '@/lib/site'
 
 export function MobileActionBar() {
   return (
@@ -13,7 +13,7 @@ export function MobileActionBar() {
           Call करा
         </a>
         <a
-          href={whatsappHref('नमस्कार भूक संघटना! मला डबा order करायचा आहे.')}
+          href={whatsappHref(`नमस्कार ${SITE.name}! मला डबा order करायचा आहे.`)}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center justify-center gap-2 rounded-full bg-primary py-3 text-sm font-semibold text-primary-foreground"

@@ -10,18 +10,18 @@ const PROMISES = [
 
 export function PromiseSection() {
   return (
-    <section className="bg-primary py-20 text-primary-foreground md:py-24">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+    <section className="px-4 sm:px-6">
+      <div className="mx-auto max-w-6xl rounded-3xl bg-charcoal px-6 py-16 text-charcoal-foreground sm:px-10 md:py-20">
         <SectionHeading eyebrow="आमचं वचन" title="जेवण साधं, पण मनापासून." invert />
-        <div className="mt-12 grid gap-5 md:grid-cols-3">
+        <div className="mt-12 grid gap-4 md:grid-cols-3">
           {PROMISES.map((p, i) => (
             <Reveal key={p.title} delay={i * 100}>
-              <div className="h-full rounded-3xl border border-primary-foreground/15 bg-primary-foreground/[0.06] p-7 transition-colors hover:bg-primary-foreground/10">
-                <span className="flex size-12 items-center justify-center rounded-2xl bg-gold/20 text-gold">
-                  <p.icon className="size-6" aria-hidden="true" />
+              <div className="group h-full rounded-2xl border border-charcoal-foreground/10 bg-charcoal-foreground/[0.04] p-7 transition-colors hover:border-charcoal-foreground/20 hover:bg-charcoal-foreground/[0.07]">
+                <span className="flex size-11 items-center justify-center rounded-xl bg-primary text-primary-foreground">
+                  <p.icon className="size-5" aria-hidden="true" />
                 </span>
-                <h3 className="mt-5 text-xl font-semibold">{p.title}</h3>
-                <p className="mt-2 leading-relaxed text-primary-foreground/75">{p.text}</p>
+                <h3 className="mt-6 font-heading text-xl">{p.title}</h3>
+                <p className="mt-2 leading-relaxed text-charcoal-foreground/65">{p.text}</p>
               </div>
             </Reveal>
           ))}

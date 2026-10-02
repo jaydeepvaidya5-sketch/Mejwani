@@ -1,30 +1,25 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
-import { Mukta, Tiro_Devanagari_Marathi } from 'next/font/google'
+import { Mukta } from 'next/font/google'
 import './globals.css'
 
 const mukta = Mukta({
   subsets: ['devanagari', 'latin'],
-  weight: ['400', '500', '600', '700'],
+  weight: ['400', '500', '600', '700', '800'],
   variable: '--font-mukta',
   display: 'swap',
 })
 
-const tiro = Tiro_Devanagari_Marathi({
-  subsets: ['devanagari', 'latin'],
-  weight: '400',
-  variable: '--font-tiro',
-  display: 'swap',
-})
-
 export const metadata: Metadata = {
-  title: 'भूक संघटना — घरच्या जेवणाची गोष्ट | Home-style Tiffin Service in Pune',
+  title: 'मेजवानी — घरच्या जेवणाची गोष्ट | Home-style Tiffin Service in Pune',
   description:
-    'Pune मधील घरगुती tiffin आणि mess service. दररोज ताजं, घरगुती आणि पोटभर जेवण — Monthly mess ₹1,999 पासून, single tiffin ₹89. WhatsApp वर order करा.',
-  keywords: ['tiffin service Pune', 'mess Pune', 'home food Pune', 'monthly mess', 'डबा', 'घरगुती जेवण'],
+    'मेजवानी — Pune मधील घरगुती tiffin आणि mess service. दररोज ताजं, घरगुती आणि पोटभर जेवण. Monthly mess ₹1,999 पासून, single tiffin ₹89. WhatsApp वर order करा.',
+  keywords: ['मेजवानी', 'tiffin service Pune', 'mess Pune', 'home food Pune', 'monthly mess', 'डबा', 'घरगुती जेवण'],
+  applicationName: 'मेजवानी',
   openGraph: {
-    title: 'भूक संघटना — घरच्या जेवणाची गोष्ट',
+    title: 'मेजवानी — घरच्या जेवणाची गोष्ट',
     description: 'Pune मधील घरगुती tiffin आणि monthly mess service.',
+    siteName: 'मेजवानी',
     images: ['/images/tiffin-hero.png'],
     locale: 'mr_IN',
     type: 'website',
@@ -41,7 +36,7 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   colorScheme: 'light',
-  themeColor: '#f8f3e8',
+  themeColor: '#ffffff',
   width: 'device-width',
   initialScale: 1,
 }
@@ -52,7 +47,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="mr" className={`${mukta.variable} ${tiro.variable} bg-background`}>
+    <html lang="mr" className={`${mukta.variable} bg-background`}>
       <body className="font-sans antialiased">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}

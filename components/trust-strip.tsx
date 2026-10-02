@@ -9,17 +9,17 @@ const ITEMS = [
 
 export function TrustStrip() {
   return (
-    <section aria-label="आमच्यावर विश्वास का?" className="border-y border-border bg-card">
-      <div className="mx-auto grid max-w-6xl gap-px px-4 sm:px-6 md:grid-cols-3">
+    <section aria-label="आमच्यावर विश्वास का?" className="px-4 sm:px-6">
+      <div className="mx-auto grid max-w-6xl overflow-hidden rounded-2xl border border-border bg-card md:grid-cols-3 md:divide-x md:divide-border">
         {ITEMS.map((item, i) => (
-          <Reveal key={item.title} delay={i * 100}>
-            <div className="flex items-start gap-4 py-7 md:px-6">
-              <span className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-secondary text-primary">
+          <Reveal key={item.title} delay={i * 90} className="border-b border-border last:border-b-0 md:border-b-0">
+            <div className="flex items-center gap-4 p-6 md:p-7">
+              <span className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-secondary text-primary">
                 <item.icon className="size-5" aria-hidden="true" />
               </span>
               <div>
-                <h3 className="font-heading text-xl text-primary">{item.title}</h3>
-                <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{item.text}</p>
+                <h3 className="font-heading text-lg text-foreground">{item.title}</h3>
+                <p className="mt-0.5 text-sm leading-relaxed text-muted-foreground">{item.text}</p>
               </div>
             </div>
           </Reveal>
